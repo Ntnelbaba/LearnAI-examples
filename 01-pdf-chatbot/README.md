@@ -24,7 +24,7 @@ A powerful Python-based chatbot that can answer questions about the content of P
 1. Clone this repository:
 ```bash
 git clone <repository-url>
-cd pdf-chatbot
+cd 01-pdf-chatbot
 ```
 
 2. Create and activate a virtual environment (recommended):
