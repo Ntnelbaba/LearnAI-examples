@@ -24,7 +24,7 @@ Each exercise is placed in a separate folder with its own code, documentation, a
 |----------|-------|-------------|
 | [`01-pdf-chatbot`](./01-pdf-chatbot) | Document Q&A | A chatbot that reads and answers questions based on PDF content using free local models |
 | [`02-rag-bot`](./02-rag-bot) | Full RAG Pipeline | A bot that performs retrieval + generation from external sources |
-| (Coming Soon) `03-custom-agent` | AI Agent | An agent that plans and executes tasks based on instructions |
+| [`03-custom-agent`](./03-task-agent) | AI Agent | An agent that plans and executes tasks based on instructions |
 
 ---
 
