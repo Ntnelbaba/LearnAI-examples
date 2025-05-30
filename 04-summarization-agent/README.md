@@ -1,11 +1,12 @@
 # Web Article Summarization Agent 📝🔍
 
-This is an AI agent that uses a transformer model to automatically summarize web articles. It extracts content from any given URL and generates a concise summary using a pre-trained model.
+This is an AI agent that uses a transformer model to automatically summarize web articles. It extracts content from any given URL and generates a concise summary using a pre-trained model. The agent intelligently splits long articles into semantic chunks for better summarization quality.
 
 ## ✨ Features
 
 - Extracts text content from web articles using BeautifulSoup
-- Summarizes long articles by processing them in chunks
+- Intelligently splits text into semantic chunks using NLTK
+- Processes long articles in chunks while maintaining context
 - Uses a lightweight pre-trained model (`distilbart-cnn-12-6`) for summarization
 - Simple command-line interface for easy interaction
 
@@ -22,8 +23,9 @@ The `requirements.txt` includes:
 ```text
 transformers==4.40.1
 torch>=2.1.0
+beautifulsoup4==4.12.3
 requests==2.31.0
-beautifulsoup4==4.12.2
+nltk==3.8.1
 ```
 
 ## 🚀 How to Run
@@ -41,7 +43,11 @@ Enter a URL to summarize:
 > https://example.com/article
 ```
 
-The agent will fetch the article content and generate a summary.
+The agent will:
+1. Fetch the article content
+2. Split it into semantic chunks
+3. Summarize each chunk
+4. Combine the summaries into a final result
 
 ## 📂 Project Structure
 
@@ -55,8 +61,12 @@ The agent will fetch the article content and generate a summary.
 ## 🔧 Features
 
 * **Web Scraping**: Extracts article content using BeautifulSoup
-* **Text Processing**: Handles long articles by splitting them into manageable chunks
+* **Semantic Text Processing**: 
+  - Uses NLTK for intelligent sentence tokenization
+  - Splits text into chunks while preserving semantic meaning
+  - Ensures chunks don't exceed model's token limit
 * **Summarization**: Uses DistilBART model to generate concise summaries
+* **Progress Tracking**: Shows progress while processing multiple chunks
 
 ## 🧠 Model Used
 
@@ -72,7 +82,11 @@ Enter a URL to summarize:
 
 Fetching article content...
 
-Summarizing...
+Summarizing with semantic chunking...
+
+→ Summarizing chunk 1/3 (850 tokens)
+→ Summarizing chunk 2/3 (920 tokens)
+→ Summarizing chunk 3/3 (780 tokens)
 
 === Summary ===
 [Generated summary will appear here]
@@ -89,7 +103,7 @@ You can try other summarization models like:
 Just replace the model ID in `main.py`:
 
 ```python
-model="MODEL_ID_HERE"
+model_id = "MODEL_ID_HERE"
 ```
 
 ## 📜 License
