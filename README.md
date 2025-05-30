@@ -25,6 +25,7 @@ Each exercise is placed in a separate folder with its own code, documentation, a
 | [`01-pdf-chatbot`](./01-pdf-chatbot) | Document Q&A | A chatbot that reads and answers questions based on PDF content using free local models |
 | [`02-rag-bot`](./02-rag-bot) | Full RAG Pipeline | A bot that performs retrieval + generation from external sources |
 | [`03-custom-agent`](./03-task-agent) | AI Agent | An agent that plans and executes tasks based on instructions |
+| [`04-summarization-agent`](./04-summarization-agent) | Text Summarization | An agent that extracts and summarizes web articles using semantic chunking |
 
 ---
 
@@ -40,7 +41,7 @@ Each exercise is placed in a separate folder with its own code, documentation, a
 
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers)
 - [Sentence-Transformers](https://www.sbert.net/)
-- Free and open-source models such as `google/flan-t5-xl`, `all-MiniLM-L6-v2`
+- Free and open-source models such as `google/flan-t5-xl`, `all-MiniLM-L6-v2`, `sshleifer/distilbart-cnn-12-6`
 
 ---
 
